@@ -14,10 +14,8 @@ function faceCardNumber(cardString) {
 function findCard(cardString) {
  if(Number(cardString.split(" ")[0])){
    var cardNumber = cardString.split(" ")[0];
-   console.log("number");
 } else {
    var cardNumber = faceCardNumber(cardString.split(" ")[0]);
-   console.log("face card");
 }
  var suitLetter = cardString.split(" ")[2][0];
  var returnValue = "/" + cardNumber + suitLetter + ".svg";

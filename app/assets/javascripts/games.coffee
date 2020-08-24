@@ -64,23 +64,22 @@ $(document).on 'turbolinks:load', ->
      console.log("internal new game ajax does not work!")
 
  @colorToggle = (card) ->
-  if card.style.backgroundColor == "yellow"
+  if card.style.backgroundColor == "rgb(255, 200, 0)"
    card.style.backgroundColor = ""
   else
-   card.style.backgroundColor = "yellow"
-  console.log(discard)
+   card.style.backgroundColor = "rgb(255, 200, 0)"
+
 
  discardArray = () ->
-  if $("#p0").css("backgroundColor")=="rgb(255, 255, 0)"
-   console.log("weird 0")
+  if $("#p0").css("backgroundColor")=="rgb(255, 200, 0)"
    discard.push("0")
-  if $("#p1").css("backgroundColor")=="rgb(255, 255, 0)"
+  if $("#p1").css("backgroundColor")=="rgb(255, 200, 0)"
    discard.push("1")
-  if $("#p2").css("backgroundColor")=="rgb(255, 255, 0)"
+  if $("#p2").css("backgroundColor")=="rgb(255, 200, 0)"
    discard.push("2")
-  if $("#p3").css("backgroundColor")=="rgb(255, 255, 0)"
+  if $("#p3").css("backgroundColor")=="rgb(255, 200, 0)"
    discard.push("3")  
-  if $("#p4").css("backgroundColor")=="rgb(255, 255, 0)"
+  if $("#p4").css("backgroundColor")=="rgb(255, 200, 0)"
    discard.push("4")
 
 

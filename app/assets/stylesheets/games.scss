@@ -1,0 +1,53 @@
+// Place all the styles related to the Games controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+h1 {
+ color: #000037;
+}
+
+table, th, td {
+  border: 1px solid #000037;
+}
+
+ img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 100px;
+  height: 150px;
+}
+
+
+.statisticsMenu,.helpMenu {
+ text-align: right;
+}
+
+
+.computerRank,.computerWinner,.playerRank,.playerWinner,h1 {
+ text-indent: 240px;
+ text-align: left;
+}
+
+
+
+.computerRank,.playerRank, {
+ text-transform: capitalize;
+ color: #000037;
+ font-size: 1.4em;
+}
+
+
+
+.computerWinner,.playerWinner {
+ color: #9b0000;
+ text-transform: uppercase;
+ font-size: 2em;
+}
+
+button{
+ margin: 15px;
+}
+
+

@@ -1,0 +1,51 @@
+function faceCardNumber(cardString) {
+ if (cardString=="ACE"){
+   var returnValue="1";
+} else if (cardString=="JACK"){
+   var returnValue="11";
+} else if (cardString=="QUEEN"){
+   var returnValue="12";
+} else if (cardString=="KING"){
+   var returnValue="13";
+}
+ return returnValue;
+}
+
+function findCard(cardString) {
+ if(Number(cardString.split(" ")[0])){
+   var cardNumber = cardString.split(" ")[0];
+   console.log("number");
+} else {
+   var cardNumber = faceCardNumber(cardString.split(" ")[0]);
+   console.log("face card");
+}
+ var suitLetter = cardString.split(" ")[2][0];
+ var returnValue = "/" + cardNumber + suitLetter + ".svg";
+ return returnValue;
+}
+
+
+
+$(".game").val(<%=@game.id%>);
+var playerHand=("<%=@game.initial_player_hand%>");
+var playerHandArray=playerHand.split(",");
+$("#p0").css("background-color","rgba(0,0,0,0)");
+$("#p1").css("background-color","rgba(0,0,0,0)");
+$("#p2").css("background-color","rgba(0,0,0,0)");
+$("#p3").css("background-color","rgba(0,0,0,0)");
+$("#p4").css("background-color","rgba(0,0,0,0)");
+$("#cp0").attr('src',findCard(playerHandArray[0]));
+$("#cp1").attr('src',findCard(playerHandArray[1]));
+$("#cp2").attr('src',findCard(playerHandArray[2]));
+$("#cp3").attr('src',findCard(playerHandArray[3]));
+$("#cp4").attr('src',findCard(playerHandArray[4]));
+$("#cc0").attr('src',"/card.png");
+$("#cc1").attr('src',"/card.png");
+$("#cc2").attr('src',"/card.png");
+$("#cc3").attr('src',"/card.png");
+$("#cc4").attr('src',"/card.png");
+$(".computerRank").text("");
+$(".playerRank").text("");
+$(".playerWinner").text("");
+$(".computerWinner").text("");
+

@@ -1,0 +1,21 @@
+var discardArray = <%= @suggestedDiscard %>;
+$("#p0").css("background-color","rgba(0,0,0,0)");
+$("#p1").css("background-color","rgba(0,0,0,0)");
+$("#p2").css("background-color","rgba(0,0,0,0)");
+$("#p3").css("background-color","rgba(0,0,0,0)");
+$("#p4").css("background-color","rgba(0,0,0,0)");
+if (discardArray.includes(0)){
+$("#p0").css("background-color","yellow");
+}
+if (discardArray.includes(1)){
+$("#p1").css("background-color","yellow");
+}
+if (discardArray.includes(2)){
+$("#p2").css("background-color","yellow");
+}
+if (discardArray.includes(3)){
+$("#p3").css("background-color","yellow");
+}
+if (discardArray.includes(4)){
+$("#p4").css("background-color","yellow");
+}

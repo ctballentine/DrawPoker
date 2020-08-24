@@ -1,0 +1,55 @@
+$(".computerWins").text(<%=Game.where(winner: 'computer wins').length%>);
+$(".playerWins").text(<%=Game.where(winner: 'player wins').length%>);
+$(".computerWinsPercent").text(<%=(Game.where(winner: 'computer wins').length.to_f/Game.where.not(winner: nil).length*100).round(2).to_s %> + "%");
+$(".playerWinsPercent").text(<%=(Game.where(winner: 'player wins').length.to_f/Game.where.not(winner: nil).length*100).round(2)%> + "%");
+$(".royalFlushNumber").text(<%=Game.where(final_player_hand_rank: "royal flush").length + Game.where(final_computer_hand_rank: "royal flush").length%>);
+
+
+$(".royalFlushPer").text(<%=(((Game.where(final_player_hand_rank: "royal flush").length.to_f + Game.where(final_computer_hand_rank: "royal flush").length.to_f)/(Game.where.not(winner: nil).length*2).to_f)*100).round(2).to_s%> + "%");
+$(".royalFlushPerWin").text(<%= ((Game.where(final_player_hand_rank: "royal flush").where(winner: "player wins").length.to_f+Game.where(final_computer_hand_rank: "royal flush").where(winner: "computer wins").length.to_f)/(Game.where(final_player_hand_rank: "royal flush").length + Game.where(final_computer_hand_rank: "royal flush").length.to_f)*100).round(2).to_s %> + "%");
+
+$(".straightFlushNumber").text(<%=Game.where(final_player_hand_rank: "straight flush").length + Game.where(final_computer_hand_rank: "straight flush").length%>);
+$(".straightFlushPer").text(<%=(((Game.where(final_player_hand_rank: "straight flush").length.to_f + Game.where(final_computer_hand_rank: "straight flush").length.to_f)/(Game.where.not(winner: nil).length*2).to_f)*100).round(2).to_s%> + "%");
+$(".straightFlushPerWin").text(<%= ((Game.where(final_player_hand_rank: "straight flush").where(winner: "player wins").length.to_f+Game.where(final_computer_hand_rank: "straight flush").where(winner: "computer wins").length.to_f)/(Game.where(final_player_hand_rank: "straight flush").length + Game.where(final_computer_hand_rank: "straight flush").length.to_f)*100).round(2).to_s %> + "%");
+
+
+$(".fourKindNumber").text(<%=Game.where(final_player_hand_rank: "four of a kind").length + Game.where(final_computer_hand_rank: "four of a kind").length%>);
+$(".fourKindPer").text(<%=(((Game.where(final_player_hand_rank: "four of a kind").length.to_f + Game.where(final_computer_hand_rank: "four of a kind").length.to_f)/(Game.where.not(winner: nil).length*2).to_f)*100).round(2).to_s%> + "%");
+$(".fourKindPerWin").text(<%= ((Game.where(final_player_hand_rank: "four of a kind").where(winner: "player wins").length.to_f+Game.where(final_computer_hand_rank: "four of a kind").where(winner: "computer wins").length.to_f)/(Game.where(final_player_hand_rank: "four of a kind").length + Game.where(final_computer_hand_rank: "four of a kind").length.to_f)*100).round(2).to_s %> + "%");
+
+
+$(".fullHouseNumber").text(<%=Game.where(final_player_hand_rank: "full house").length + Game.where(final_computer_hand_rank: "full house").length%>);
+$(".fullHousePer").text(<%=(((Game.where(final_player_hand_rank: "full house").length.to_f + Game.where(final_computer_hand_rank: "full house").length.to_f)/(Game.where.not(winner: nil).length*2).to_f)*100).round(2).to_s%> + "%");
+$(".fullHousePerWin").text(<%= ((Game.where(final_player_hand_rank: "full house").where(winner: "player wins").length.to_f+Game.where(final_computer_hand_rank: "full house").where(winner: "computer wins").length.to_f)/(Game.where(final_player_hand_rank: "full house").length + Game.where(final_computer_hand_rank: "full house").length.to_f)*100).round(2).to_s %> + "%");
+
+
+$(".flushNumber").text(<%=Game.where(final_player_hand_rank: "flush").length + Game.where(final_computer_hand_rank: "flush").length%>);
+$(".flushPer").text(<%=(((Game.where(final_player_hand_rank: "flush").length.to_f + Game.where(final_computer_hand_rank: "flush").length.to_f)/(Game.where.not(winner: nil).length*2).to_f)*100).round(2).to_s%> + "%");
+$(".flushPerWin").text(<%= ((Game.where(final_player_hand_rank: "flush").where(winner: "player wins").length.to_f+Game.where(final_computer_hand_rank: "flush").where(winner: "computer wins").length.to_f)/(Game.where(final_player_hand_rank: "flush").length + Game.where(final_computer_hand_rank: "flush").length.to_f)*100).round(2).to_s %> + "%");
+
+
+$(".straightNumber").text(<%=Game.where(final_player_hand_rank: "straight").length + Game.where(final_computer_hand_rank: "straight").length%>);
+$(".straightPer").text(<%=(((Game.where(final_player_hand_rank: "straight").length.to_f + Game.where(final_computer_hand_rank: "straight").length.to_f)/(Game.where.not(winner: nil).length*2).to_f)*100).round(2).to_s%> + "%");
+$(".straightPerWin").text(<%= ((Game.where(final_player_hand_rank: "straight").where(winner: "player wins").length.to_f+Game.where(final_computer_hand_rank: "straight").where(winner: "computer wins").length.to_f)/(Game.where(final_player_hand_rank: "straight").length + Game.where(final_computer_hand_rank: "straight").length.to_f)*100).round(2).to_s %> + "%");
+
+
+$(".threeKindNumber").text(<%=Game.where(final_player_hand_rank: "three of a kind").length + Game.where(final_computer_hand_rank: "three of a kind").length%>);
+$(".threeKindPer").text(<%=(((Game.where(final_player_hand_rank: "three of a kind").length.to_f + Game.where(final_computer_hand_rank: "three of a kind").length.to_f)/(Game.where.not(winner: nil).length*2).to_f)*100).round(2).to_s%> + "%");
+$(".threeKindPerWin").text(<%= ((Game.where(final_player_hand_rank: "three of a kind").where(winner: "player wins").length.to_f+Game.where(final_computer_hand_rank: "three of a kind").where(winner: "computer wins").length.to_f)/(Game.where(final_player_hand_rank: "three of a kind").length + Game.where(final_computer_hand_rank: "three of a kind").length.to_f)*100).round(2).to_s %> + "%");
+
+
+$(".twoPairNumber").text(<%=Game.where(final_player_hand_rank: "two pairs").length + Game.where(final_computer_hand_rank: "two pairs").length%>);
+$(".twoPairPer").text(<%=(((Game.where(final_player_hand_rank: "two pairs").length.to_f + Game.where(final_computer_hand_rank: "two pairs").length.to_f)/(Game.where.not(winner: nil).length*2).to_f)*100).round(2).to_s%> + "%");
+$(".twoPairPerWin").text(<%= ((Game.where(final_player_hand_rank: "two pairs").where(winner: "player wins").length.to_f+Game.where(final_computer_hand_rank: "two pairs").where(winner: "computer wins").length.to_f)/(Game.where(final_player_hand_rank: "two pairs").length + Game.where(final_computer_hand_rank: "two pairs").length.to_f)*100).round(2).to_s %> + "%");
+
+
+$(".onePairNumber").text(<%=Game.where(final_player_hand_rank: "one pair").length + Game.where(final_computer_hand_rank: "one pair").length%>);
+$(".onePairPer").text(<%=(((Game.where(final_player_hand_rank: "one pair").length.to_f + Game.where(final_computer_hand_rank: "one pair").length.to_f)/(Game.where.not(winner: nil).length*2).to_f)*100).round(2).to_s%> + "%");
+$(".onePairPerWin").text(<%= ((Game.where(final_player_hand_rank: "one pair").where(winner: "player wins").length.to_f+Game.where(final_computer_hand_rank: "one pair").where(winner: "computer wins").length.to_f)/(Game.where(final_player_hand_rank: "one pair").length + Game.where(final_computer_hand_rank: "one pair").length.to_f)*100).round(2).to_s %> + "%");
+
+
+$(".nothingNumber").text(<%=Game.where(final_player_hand_rank: "nothing").length + Game.where(final_computer_hand_rank: "nothing").length%>);
+$(".nothingPer").text(<%=(((Game.where(final_player_hand_rank: "nothing").length.to_f + Game.where(final_computer_hand_rank: "nothing").length.to_f)/(Game.where.not(winner: nil).length*2).to_f)*100).round(2).to_s%> + "%");
+$(".nothingPerWin").text(<%= ((Game.where(final_player_hand_rank: "nothing").where(winner: "player wins").length.to_f+Game.where(final_computer_hand_rank: "nothing").where(winner: "computer wins").length.to_f)/(Game.where(final_player_hand_rank: "nothing").length + Game.where(final_computer_hand_rank: "nothing").length.to_f)*100).round(2).to_s %> + "%");
+
+

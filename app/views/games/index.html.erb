@@ -1,0 +1,32 @@
+<h1>5 Card Draw</h1>
+<div class="statisticsMenu"> <%= link_to "Statistics", poker_stat_index_path %> </div>
+<div class="helpMenu"> <%= link_to "Help", poker_help_index_path %> </div>
+
+<div class="menus">
+<div class="computerRank"></div>
+<div class="computerWinner"></div>
+</div>
+<table>
+  <tr>
+    <td id="c0"> <img id="cc0" src="/card.png" width="100" height="150">  </td>
+    <td id="c1"> <img id="cc1" src="/card.png" width="100" height="150">  </td>
+    <td id="c2"> <img id="cc2" src="/card.png" width="100" height="150">  </td>
+    <td id="c3"> <img id="cc3" src="/card.png" width="100" height="150">  </td>
+    <td id="c4"> <img id="cc4" src="/card.png" width="100" height="150">  </td>
+  </tr>
+  <tr>
+    <td onclick="colorToggle(this)" id="p0"><img id="cp0" src="/card.png" width="10" height="150"> </td>
+    <td onclick="colorToggle(this)" id="p1"><img id="cp1" src="/card.png" width="100" height="150">  </td>
+    <td onclick="colorToggle(this)" id="p2"><img id="cp2" src="/card.png" width="100" height="150">  </td>
+    <td onclick="colorToggle(this)" id="p3"><img id="cp3" src="/card.png" width="100" height="150">  </td>
+    <td onclick="colorToggle(this)" id="p4"><img id="cp4" src="/card.png" width="100" height="150">  </td>
+  </tr>
+</table>
+<div class="playerWinner"></div>
+<div class="playerRank"></div>
+
+<button onclick="newGame()"> New Game </button>
+<button class="game" val ="" onclick="discard(this.value)"> Discard </button>
+<button onclick="suggestDiscard()"> Suggest Discard </button>
+
+

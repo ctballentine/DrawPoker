@@ -1,0 +1,54 @@
+<h1>Help</h1>
+<div class="gameMenu"> <%= link_to "Return to Game", games_index_path %> </div>
+<h4>Playing the Game</h4>
+<div class="helpText">
+<p>You can find a three button interface, right below the table of cards.
+<button>New Game</button>
+<button>Discard</button>
+<button>Suggest Discard</button>
+</p>
+<p>
+<button>New Game</button><br>
+This will start a new game! If you haven't finished the hand on the screen it will disappear <strong>forever!</strong> You'll never know what might have happened!
+</p>
+
+<p>
+<button>Discard</button><br>
+You can pick which cards you'd like to discard! Just click on them and they'll develop a yellow glow. If you change your mind, click it again they'll go back to normal. Once you've decided which cards you'd like to get rid of, click the Discard button and they'll disappear <strong>forever!</strong> They'll be replaced with new cards. If you don't click any cards, the computer assumes you just want to keep all of them. Maybe you have a really great hand! At this point you'll get to see the computer's cards. You'll know who won! I hope you won! But if you didn't just click on New Game and try again!
+</p>
+<p>
+<button>Suggest Discard</button><br>
+Maybe you're not sure which cards you'd like to discard! Click on this button and the computer will suggest which cards you should get rid of. It'll turn them yellow. You don't have to accept the computer's suggestion! Click on a selected card to keep it, or click on an additional card to get rid of that one too. After you've made up your mind, click on Discard and they'll disappear <strong>forever!</strong>
+</p>
+</p>
+</div>
+<br>
+<h4>Rules of Poker</h4>
+<div class="helpText">
+<p>
+Have you played Poker before? It's fun! There are many variations of the game. This one is called Five Card Draw. You and the computer both get five cards to start with. You look them over and decide which you'd like to keep and which you'd like to discard. After your discard, each of the discarded cards are replaced and you compare your hand to the computer's and see whose is higher.
+</p>
+<p>
+The table below shows the rankings of the hands. The higher up the table, the higher the rank. If you and the computer have the same hand, it looks to see who has the highest cards. So if you have a flush with an Ace, that will beat a flush whose high card is a Jack. If you have pairs, three of a kind, or four of a kind, it checks in the matched cards first. If those are the same, then the additional cards are checked to see which is higher. Every now and then you and the computer might have the exact same cards. Then it's a tie! That's wild! It doesn't happen often. I ran about 5,000 simulation games when I was building this site, in fact, and it never happened. But it could! If it happens to you, you must be lucky!
+</p>
+<p>
+In case you're wondering how you know which card is higher, I'll explain! The number cards, 2-10, have the value listed on their face. Jacks are worth 11, Queens are worth 12 and Kings are worth 13. Aces are a little different. They can be worth 1 or 14, depending on the rest of your hand. Usually, you'll want them to be worth 14. But, for example, if you have Ace, 2, 3, 4 and 5, you'd want the Ace to be worth 1. You'll have a straight. That's a pretty good hand.
+</p>
+</div>
+<div>
+<table>
+<caption>Value of Poker Hands</caption>
+<tr><th>Hand</th><th>Description</th></tr>
+<tr><td>Royal Flush</td><td>Ace,King,Queen,Jack,10 all of the same suit</td></tr>
+<tr><td>Straight Flush</td><td>Cards in a consecutive sequence all of the same suit</td></tr>
+<tr><td>Four of a Kind</td><td>Four cards all of the same rank</td></tr>
+<tr><td>Full House</td><td>Three of a kind and a pair</td></tr>
+<tr><td>Flush</td><td>Ace,King,Queen,Jack,10 all of the same suit</td></tr>
+<tr><td>Straight</td><td>Cards in a consecutive sequence</td></tr>
+<tr><td>Three of a Kind</td><td>Three cards all of the same rank</td></tr>
+<tr><td>Two Pairs</td><td>Two different pairs of cards with the same rank </td></tr>
+<tr><td>One Pair</td><td>Two cards of the same rank</td></tr>
+<tr><td>Nothing</td><td>A hand with none of the combinations, worth as much as its highest card</td></tr>
+</table>
+</div
+

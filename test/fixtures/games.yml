@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  initial_computer_hand: MyString
+  initial_player_hand: MyString
+  computer_discard: MyString
+  player_discard: MyString
+  cards_in_play: MyString
+  winner: MyString
+  initial_computer_hand_rank: MyString
+  initial_player_hand_rank: MyString
+  final_computer_hand_rank: MyString
+  final_player_hand_rank: MyString
+
+two:
+  initial_computer_hand: MyString
+  initial_player_hand: MyString
+  computer_discard: MyString
+  player_discard: MyString
+  cards_in_play: MyString
+  winner: MyString
+  initial_computer_hand_rank: MyString
+  initial_player_hand_rank: MyString
+  final_computer_hand_rank: MyString
+  final_player_hand_rank: MyString

@@ -21,7 +21,10 @@ table, th, td {
 
 
 .statisticsMenu,.helpMenu {
- text-align: right;
+ display: inline;
+ float: right;
+ margin: 20px;
+
 }
 
 

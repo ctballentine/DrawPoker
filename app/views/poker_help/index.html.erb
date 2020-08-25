@@ -1,11 +1,12 @@
-<h1>Help</h1>
 <div class="gameMenu"> <%= link_to "Return to Game", games_index_path %> </div>
+<h1>Help</h1>
+
 <h4>Playing the Game</h4>
 <div class="helpText">
 <p>You can find a three button interface, right below the table of cards.
-<button>New Game</button>
-<button>Discard</button>
-<button>Suggest Discard</button>
+<button class="example">New Game</button>
+<button class="example">Discard</button>
+<button class="example">Suggest Discard</button>
 </p>
 <p>
 <button>New Game</button><br>
@@ -50,5 +51,8 @@ In case you're wondering how you know which card is higher, I'll explain! The nu
 <tr><td>One Pair</td><td>Two cards of the same rank</td></tr>
 <tr><td>Nothing</td><td>A hand with none of the combinations, worth as much as its highest card</td></tr>
 </table>
-</div
+</div>
+
+
+if you have any more questions or concerns or if you just want to say hi, you can <%= mail_to "ctballentine@gmail.com", "Email me!" %>
 

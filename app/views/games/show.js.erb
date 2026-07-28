@@ -1,0 +1,21 @@
+var suggestedIds = <%= @suggestedDiscard %>;
+$("#p0").css("background-color","rgba(0,0,0,0)");
+$("#p1").css("background-color","rgba(0,0,0,0)");
+$("#p2").css("background-color","rgba(0,0,0,0)");
+$("#p3").css("background-color","rgba(0,0,0,0)");
+$("#p4").css("background-color","rgba(0,0,0,0)");
+if (suggestedIds.includes(0)){
+$("#p0").css("background-color","rgb(255, 200, 0)");
+}
+if (suggestedIds.includes(1)){
+$("#p1").css("background-color","rgb(255, 200, 0)");
+}
+if (suggestedIds.includes(2)){
+$("#p2").css("background-color","rgb(255, 200, 0)");
+}
+if (suggestedIds.includes(3)){
+$("#p3").css("background-color","rgb(255, 200, 0)");
+}
+if (suggestedIds.includes(4)){
+$("#p4").css("background-color","rgb(255, 200, 0)");
+}

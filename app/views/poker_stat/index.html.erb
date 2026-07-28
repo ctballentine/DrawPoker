@@ -1,0 +1,35 @@
+<div class="gameMenu"> <%= link_to "Return to Game", games_path %> </div>
+<h1>Statistics</h1>
+
+<div>
+  <table>
+    <tr><th>Player Wins</th><th>Computer Wins</th></tr>
+    <tr>
+      <td><%= @player_wins %></td>
+      <td><%= @computer_wins %></td>
+    </tr>
+    <tr>
+      <td><%= @player_win_per %>%</td>
+      <td><%= @computer_win_per %>%</td>
+    </tr>
+  </table>
+</div>
+
+<div>
+  <table>
+    <tr>
+      <th>Hands</th>
+      <th>Number of Occurrences</th>
+      <th>Percentage of Occurrences</th>
+      <th>Percentage of Times Hand is a Winner</th>
+    </tr>
+    <% @hand_types.each do |hand| %>
+      <tr>
+        <td><%= hand.titleize %></td>
+        <td><%= @stats[hand][:number] %></td>
+        <td><%= @stats[hand][:occur_per] %></td>
+        <td><%= @stats[hand][:win_per] %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

@@ -1,5 +1,4 @@
 class GamesController < ApplicationController
-load "#{Rails.root}/lib/assets/DrawPokerLogic.rb"
 include DrawPokerLogic
   def new
 
@@ -39,15 +38,8 @@ include DrawPokerLogic
 
   def edit
     @game=Game.find(params[:game] || params[:id])
-    player_discard_selection=[]
-    discard_params=params[:discard]
-    if discard_params
-     discard_params.each do |x|
-     player_discard_selection << x.to_i
-     end
-    end
+    player_discard_selection = params[:discard]&.map(&:to_i) || []
 
-    
     if @game.winner == nil
       initial_player_hand_array=@game.initial_player_hand.split(",")
       initial_computer_hand_array=@game.initial_computer_hand.split(",")
